@@ -27,7 +27,7 @@ services:
             PMA_PASSWORD: pass123
             PMA_PORT: 3306
         ports:
-            - "8004:8004"
+            - "8008:8008"
         networks: 
             - app-network
 
