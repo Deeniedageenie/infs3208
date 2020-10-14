@@ -1,14 +1,14 @@
 <?php 
 require_once "server.php";
-  session_start(); 
+// session_start(); 
 
     
-  if(!$_SESSION['email']  )
-    {  
-      if(!isset($_COOKIE['email'])){
-      header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
-  }
-}
+//  if(!$_SESSION['email']  )
+//   {  
+//      if(!isset($_COOKIE['email'])){
+//      header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
+//      }
+//    }
 
 $username = $_SESSION['username']= $_COOKIE['username'];
 
@@ -46,7 +46,7 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
       
       $conn->query("INSERT INTO `comment` (`event_id`, `comment`) VALUES ('$event_id', '$comment')");
 
-      header("Location: index.php");
+      //header("Location: index.php");
       
       
       }
