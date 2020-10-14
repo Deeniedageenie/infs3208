@@ -1,8 +1,8 @@
 <?php
 
-$dbhost = "localhost";
-$dbuser = "master";
-$dbpass = "root123";
+$dbhost = "master";
+$dbuser = "root";
+$dbpass = "pass123";
 $dbname = "registration";
 
 // Initialize a connection
