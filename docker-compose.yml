@@ -1,0 +1,57 @@
+version: '3.3'
+
+services: 
+
+    mysql:
+        image: mariadb:latest
+       
+        restart: always
+        environment: 
+            MYSQL_ROOT_PASSWORD: MyDBRoot123
+            MYSQL_DATABASE: registration
+            MYSQL_USER: master
+            MYSQL_PASSWORD: root123
+        ports: 
+            - "3306:3306"
+        networks: 
+            - app-network
+
+
+    myphp:
+        depends_on: 
+            - mysql
+            - myredis
+        build: ./src/php
+        privileged: true
+        restart: always
+        working_dir: /var/www/html
+        volumes: 
+            - ./src:/var/www/html:rw
+              
+        ports: 
+            - "9000:9000"
+        networks: 
+            - app-network
+    
+    mynginx:
+        depends_on: 
+            - myphp
+        image: nginx:latest
+        privileged: true
+        restart: always
+        working_dir: /var/www/html
+        volumes: 
+            - ./src:/var/www/html:rw
+            - ./src/nginx.ini:/etc/nginx/conf.d/default.conf:ro
+            - ./src/php-fpm.conf:/etc/php/7.4/fpm/php-fpm.conf:ro
+            - ./src/www.conf:/etc/php/7.4/fpm/pool.d/www.conf:ro
+        container_name: mynginx
+        ports: 
+            - "8080:80"
+        networks: 
+            - app-network
+
+
+networks: 
+    app-network:
+        driver: bridge
