@@ -19,8 +19,8 @@
                 <?php endif ?>
 
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item warning ">
-                      <a class="nav-link btn " href="index.php">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item active ">
+                      <a class="nav-link btn btn-danger" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     
                     <li class="nav-item ">
