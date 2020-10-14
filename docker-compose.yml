@@ -35,7 +35,7 @@ services:
         depends_on: 
             - mysql
     
-        build: php
+        image: php:7.4-fpm
         privileged: true
         restart: always
         working_dir: /var/www/html
