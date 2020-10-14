@@ -1,7 +1,7 @@
 <?php 
     require 'server.php';
     
-   // session_start();
+   session_start();
     $password_err = "";
     $email_err = "";
     $attempt_count = 0;
