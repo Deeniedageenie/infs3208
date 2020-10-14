@@ -84,9 +84,7 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
         
         <?php include "map.php"?>
          
-        <!-- <?php  if (isset($_SESSION['username'])) : ?>
-    	    <p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-        <?php endif ?> -->
+        
 
        
 
