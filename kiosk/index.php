@@ -1,5 +1,5 @@
 <?php 
-require_once "server.php";
+require "server.php";
 session_start(); 
 
     
