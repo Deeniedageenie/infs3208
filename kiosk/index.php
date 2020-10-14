@@ -109,7 +109,7 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
                     
                           <div class="card-footer">
                           <form action="index.php" method="POST">
-                          <input type="hidden" name="event_id" value="<?php echo $row["event_id"]?>">
+                          <input type="text" name="event_id" value="<?php echo $row["event_id"]?>">
                             <tr>
                             
                             <td><input type="text" name="comment" class="form-control" placeholder="Comments..." value=""></td>
