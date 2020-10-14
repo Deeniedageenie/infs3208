@@ -56,10 +56,10 @@ services:
         restart: always
         working_dir: /var/www/html
         volumes: 
-            - ./kiosk:/var/www/html:rw
-            - ./kiosk/nginx.ini:/etc/nginx/conf.d/default.conf:ro
-            - ./kiosk/php-fpm.conf:/etc/php/7.4/fpm/php-fpm.conf:ro
-            - ./kiosk/www.conf:/etc/php/7.4/fpm/pool.d/www.conf:ro
+            - ./kiosk:/var/www/html
+            - ./src/nginx.ini:/etc/nginx/conf.d/default.conf
+            - ./src/php-fpm.conf:/etc/php/7.4/fpm/php-fpm.conf
+            - ./src/www.conf:/etc/php/7.4/fpm/pool.d/www.conf
 
         container_name: mynginx
         ports: 
