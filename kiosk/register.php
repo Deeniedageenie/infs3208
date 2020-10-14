@@ -60,7 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $sql = "INSERT INTO users (username, email, password) VALUES ('$username','$email', '$password')";
         $deets = "INSERT INTO user_details (username) VALUES ('$username')";
 
-        setcookie("username", $username, time() + 60*60*24, "/");
+        //setcookie("username", $username, time() + 60*60*24, "/");
         $conn->query($deets);
         $conn->query($sql);
 
@@ -68,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION["username"] = $_POST["username"];
         
         $_SESSION['loggin_in'] = true;
-        header("Location: ./profile.php");
+        header("Location: login.php");
         echo($_POST["email"]);
         
          
