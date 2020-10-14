@@ -2,7 +2,7 @@
 
 $dbhost = "master";
 $dbuser = "root";
-$dbpass = "pass123";
+$dbpass = "";
 $dbname = "registration";
 
 // Initialize a connection
