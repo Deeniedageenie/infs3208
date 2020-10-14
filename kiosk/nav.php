@@ -15,7 +15,7 @@
 
                   <?php  if (isset($_SESSION['username'])) : ?>
                 
-                <a class="btn btn-info" href="profile_update.php">Welcome <strong><?php echo $_SESSION['username']; ?></strong></a>
+                <a class="btn btn-basic" href="profile_update.php">Welcome <strong><?php echo $_SESSION['username']; ?></strong></a>
                 <?php endif ?>
 
                   <ul class="navbar-nav mr-auto">
