@@ -19,7 +19,7 @@
                 <?php endif ?>
 
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active ">
+                    <li class="nav-item warning ">
                       <a class="nav-link btn " href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     
