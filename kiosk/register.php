@@ -68,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION["username"] = $_POST["username"];
         
         $_SESSION['loggin_in'] = true;
-        header("Location: profile.php");
+        header("Location: ./profile.php");
         echo($_POST["email"]);
         
          
