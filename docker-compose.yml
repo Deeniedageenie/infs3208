@@ -32,7 +32,7 @@ services:
         networks: 
             - app-network
 
-    php:
+    myphp:
         depends_on: 
             - mysqlmaster
     
@@ -50,9 +50,12 @@ services:
     
     nginx:
         depends_on: 
-            - php
+            - myphp
         image: nginx:latest
-
+        container_name: mynginx
+        privileged: true
+        restart: always
+        working_dir: /var/www/html
         volumes: 
             - ./kiosk:/var/www/html:rw
             - ./src/nginx.ini:/etc/nginx/conf.d/default.conf:ro
