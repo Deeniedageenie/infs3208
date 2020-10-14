@@ -48,7 +48,7 @@ services:
         networks: 
             - app-network
     
-    web:
+    nginx:
         depends_on: 
             - php
         image: nginx:latest
