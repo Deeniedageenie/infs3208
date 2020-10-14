@@ -44,7 +44,7 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
       $comment = ucfirst(strtolower( $_POST["comment"]));
       $event_id = $_POST["event_id"];
       
-      $conn->query("INSERT INTO `comment` (`event_id`, `comment`) VALUES ('$event_id', '$comment')");
+      $conn->query("INSERT INTO `comment` (`event_id`,`comment`) VALUES ('$event_id','$comment')");
 
       header("Location: index.php");
      
