@@ -1,7 +1,7 @@
 <?php 
 // Include config file
 require_once "server.php";
-//session_start();
+session_start();
  
 // Define variables and initialize with empty values
 $username = $_SESSION['username'];
@@ -159,7 +159,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <label>Profile photo</label>
                 <div class="input-group">
                     
-                        <!-- <div class="custom-file">
+                        <div class="custom-file">
                             <input type="file" name="profile_pic" accept="image/*" onchange="preview_image(event)" class="custom-file-input" id="inputGroupFile01"
                             aria-describedby="inputGroupFileAddon01">
                             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
