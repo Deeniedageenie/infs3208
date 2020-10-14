@@ -2,6 +2,7 @@
 
 // Include config file
 require_once "server.php";
+session_start(); 
  
 // Define variables and initialize with empty values
 $username = $password = $email = "";

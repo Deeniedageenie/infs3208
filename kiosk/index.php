@@ -1,6 +1,6 @@
 <?php 
 require_once "server.php";
-// session_start(); 
+session_start(); 
 
     
  //if(!$_SESSION['email']  )
