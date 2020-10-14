@@ -55,7 +55,8 @@ services:
         restart: always
         working_dir: /var/www/html
         volumes: 
-            - ./kiosk:/var/www/html
+            - ./kiosk:/var/www/html:rw
+
         container_name: mynginx
         ports: 
             - "8080:80"
