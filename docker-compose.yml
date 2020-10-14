@@ -21,7 +21,7 @@ services:
         depends_on: 
             - mysqlmaster
         image: phpmyadmin/phpmyadmin
-        restart: always
+        
         environment:
             PMA_HOST: master
             PMA_USER: root
