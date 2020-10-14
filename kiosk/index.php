@@ -26,15 +26,15 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
     //   $comment_details = $comment_results;
     // }
 
-  //  function getcomments($ev_id){
-  //    global $conn;
-  //  
-  //    $comment_results = $conn->query( "SELECT * FROM comment WHERE event_id = '$ev_id' ");
-  //    if ($comment_results->num_rows > 0) {
-  //      $comment_details = $comment_results;
-  //    }
-  //    return $comment_details;
-  //  }
+    function getcomments($ev_id){
+      global $conn;
+    
+      $comment_results = $conn->query( "SELECT * FROM comment WHERE event_id = '$ev_id' ");
+      if ($comment_results->num_rows > 0) {
+      $comment_details = $comment_results;
+     }
+     return $comment_details;
+    }
 
     
 
@@ -44,10 +44,10 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
       $comment = ucfirst(strtolower( $_POST["comment"]));
       $event_id = $_POST["event_id"];
       
-      $mycomment= "INSERT INTO 'comment' ('event_id', 'comment') VALUES ('$event_id', '$comment')";
+      $conn->query("INSERT INTO `comment` (`event_id`, `comment`) VALUES ('$event_id', '$comment')");
 
-      $conn->query($mycomment);
       header("Location: index.php");
+     
       
       
       }
