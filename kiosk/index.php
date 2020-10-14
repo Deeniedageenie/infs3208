@@ -26,15 +26,15 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
     //   $comment_details = $comment_results;
     // }
 
-    function getcomments($ev_id){
-      global $conn;
-    
-      $comment_results = $conn->query( "SELECT * FROM comment WHERE event_id = '$ev_id' ");
-      if ($comment_results->num_rows > 0) {
-        $comment_details = $comment_results;
-      }
-      return $comment_details;
-    }
+  //  function getcomments($ev_id){
+  //    global $conn;
+  //  
+  //    $comment_results = $conn->query( "SELECT * FROM comment WHERE event_id = '$ev_id' ");
+  //    if ($comment_results->num_rows > 0) {
+  //      $comment_details = $comment_results;
+  //    }
+  //    return $comment_details;
+  //  }
 
     
 
