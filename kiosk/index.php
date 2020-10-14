@@ -46,7 +46,7 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
       
       $conn->query("INSERT INTO `comment` (`event_id`,`comment`) VALUES ('$event_id','$comment')");
 
-      header("Location: index.php");
+      //header("Location: index.php");
      
       
       
