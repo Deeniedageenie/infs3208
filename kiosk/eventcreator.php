@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         
        
-        header("Location: your_events.php");
+        header("Location:your_events.php");
     
         
          
