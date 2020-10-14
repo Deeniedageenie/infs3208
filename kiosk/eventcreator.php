@@ -2,7 +2,7 @@
 <?php 
 // Include config file
 require_once "server.php";
-session_start();
+//session_start();
 
 // Define variables and initialize with empty values
 $username = $_SESSION['username']= $_COOKIE['username'];
@@ -11,10 +11,10 @@ $time = $location = $description = $event_name =$date =  "";
 $time_err = $location_err = $description_err = $event_name_err =$date_err = "";
 
 
-if(!$_SESSION['email'] || !isset($_COOKIE['email']) )
-{  
-  header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
-}
+//if(!$_SESSION['email'] || !isset($_COOKIE['email']) )
+//{  
+//  header("Location: login.php");//redirect to login page to secure the welcome page without login access. 
+//}
 
  
 // Processing form data when form is submitted
