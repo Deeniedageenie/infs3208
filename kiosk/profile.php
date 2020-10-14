@@ -1,4 +1,3 @@
-
 <?php 
 // Include config file
 require_once "server.php";
@@ -17,7 +16,7 @@ $rs = $conn->query($query);
 
 if(!$_SESSION['email'] || !isset($_COOKIE['email']) )
 {  
-  header("Location:login.php");//redirect to login page to secure the welcome page without login access.  
+  header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
 }
 
 

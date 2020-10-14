@@ -1,4 +1,3 @@
-
 <?php 
 
 // Include config file
@@ -79,7 +78,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     //mysqli_close($conn);
 }
 ?>
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>

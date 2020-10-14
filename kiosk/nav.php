@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
                 <a class="navbar-brand" href="#current">
                   <img src="images/logo.png" alt="logo" style="width:35px">
@@ -36,14 +34,13 @@
                     </li>
                   </ul>
                   <ul class="form-inline my-2 my-lg-0">
-                  
-                  <?php 
-                    if (isset($_SESSION["email"])) {
+                    <?php 
+                    //if (isset($_SESSION["email"])) {
                             echo '<a class="btn btn-outline-primary" href="login.php?logout">Sign out</a>';
                             echo '<a class="btn btn-outline-primary" href="profile_update.php">profile</a>';
-                        } else {
-                            echo '<a class="btn btn-outline-primary" href="login.php">Sign in</a>';
-                        }
+                    //    } else {
+                     //       echo '<a class="btn btn-outline-primary" href="login.php">Sign in</a>';
+                       // }
                     ?>
                   </ul>
                   
