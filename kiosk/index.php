@@ -3,12 +3,12 @@ require_once "server.php";
 // session_start(); 
 
     
-//  if(!$_SESSION['email']  )
-//   {  
-//      if(!isset($_COOKIE['email'])){
-//      header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
-//      }
-//    }
+ if(!$_SESSION['email']  )
+   {  
+     if(!isset($_COOKIE['email'])){
+     header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
+      }
+   }
 
 $username = $_SESSION['username']= $_COOKIE['username'];
 

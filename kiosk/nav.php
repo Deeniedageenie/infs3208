@@ -35,12 +35,12 @@
                   </ul>
                   <ul class="form-inline my-2 my-lg-0">
                     <?php 
-                    //if (isset($_SESSION["email"])) {
+                    if (isset($_SESSION["email"])) {
                             echo '<a class="btn btn-outline-primary" href="login.php?logout">Sign out</a>';
                             echo '<a class="btn btn-outline-primary" href="profile_update.php">profile</a>';
-                    //    } else {
-                     //       echo '<a class="btn btn-outline-primary" href="login.php">Sign in</a>';
-                       // }
+                        } else {
+                            echo '<a class="btn btn-outline-primary" href="login.php">Sign in</a>';
+                       }
                     ?>
                   </ul>
                   
