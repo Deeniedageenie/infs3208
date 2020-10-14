@@ -44,7 +44,7 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
       $comment = ucfirst(strtolower( $_POST["comment"]));
       $event_id = $_POST["event_id"];
       
-      $conn->query("INSERT INTO comment (event_id, comment) VALUES ('$event_id', '$comment')");
+      $conn->query("INSERT INTO 'comment' ('event_id', 'comment') VALUES ('$event_id', '$comment')");
 
       header("Location: index.php");
       
@@ -179,7 +179,7 @@ $result = $conn->query("SELECT * FROM events WHERE username = '$username'");
 <script src="scripts/scripts.js"> </script>
 <script src="scripts/maps.js"> </script>
 <!-- MAPS -->
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsUQBZ1h17-h2bRZiM_bP_yp-tX4A5mgo&callback=initMap"
+<script async defer  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsUQBZ1h17-h2bRZiM_bP_yp-tX4A5mgo&callback=initMap"
 type="text/javascript"></script>
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
