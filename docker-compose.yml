@@ -35,7 +35,7 @@ services:
         depends_on: 
             - mysql
     
-        build: .
+        build: ./kiosk/php
         privileged: true
         restart: always
         working_dir: /var/www/html
