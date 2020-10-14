@@ -14,10 +14,10 @@ $security_q1_err = $security_q2_err =  $answer1_err = $answer2_err = $statusMsg 
 $query = "SELECT username FROM users WHERE  email= '$email' ";
 $rs = $conn->query($query);
 
-if(!$_SESSION['email'] || !isset($_COOKIE['email']) )
-{  
-  header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
-}
+// if(!$_SESSION['email'] || !isset($_COOKIE['email']) )
+// {  
+//   header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
+// }
 
 
 

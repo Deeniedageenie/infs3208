@@ -13,10 +13,10 @@ $f_name_err = $l_name_err = $age_err = $gender_err = $city_err = "";
 
 
 
-if(!$_SESSION['email'] || !isset($_COOKIE['email']) )
-{  
-  header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
-}
+// if(!$_SESSION['email'] || !isset($_COOKIE['email']) )
+// {  
+//  header("Location: login.php");//redirect to login page to secure the welcome page without login access.  
+// }
 
 
 
