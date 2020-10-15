@@ -38,7 +38,7 @@ services:
         
         image: php:7.4-fpm
         build: ./src/php
-        command:  ["RUN pecl install igbinary && docker-php-ext-install mysqli "]
+        command:  ["pecl install igbinary && docker-php-ext-install mysqli "]
     
         privileged: true
         restart: always
