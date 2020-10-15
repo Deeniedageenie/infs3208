@@ -76,4 +76,5 @@ services:
 
 networks: 
     app-network:
-        driver: bridge
+        external: 
+            name: app-network
