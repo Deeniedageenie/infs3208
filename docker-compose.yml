@@ -38,7 +38,7 @@ services:
         
         image: php:7.4-fpm
         build: ./src/php
-        command: docker-php-ext-install mysqli
+
     
         privileged: true
         restart: always
