@@ -35,15 +35,10 @@ services:
     myphp:
         depends_on: 
             - mysqlmaster
-        image: php:7.4-fpm
-        command:
-            - /bin/sh
-            - -c
-            - |
-                docker-php-ext-install mysqli 
-                echo "extension installed.....starting php-fpm........................................"
-                php-fpm
+
         build: ./src/php
+        image: php:7.4-fpm
+    
         privileged: true
         restart: always
         working_dir: /var/www/html
