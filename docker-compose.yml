@@ -35,7 +35,8 @@ services:
     myphp:
         depends_on: 
             - mysqlmaster
-      
+        image: php:7.4-fpm
+        command: "docker-php-ext-install mysqli"
         build: ./src/php
         privileged: true
         restart: always
