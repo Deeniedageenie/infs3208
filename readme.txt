@@ -5,6 +5,6 @@ Step 2. "docker-compose up -d"
         runs all the containers
         
 
-Step 3. Go to http://{EXTERNAL IP}:8080/index.php 
-
+Step 3. Go to http://{EXTERNAL IP}:8080/index.php to check the website is running 
+        and http://{EXTERNAL IP}:8008 to check phpMyAdmin is running
 
