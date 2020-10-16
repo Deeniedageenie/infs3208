@@ -36,10 +36,8 @@ services:
         depends_on: 
             - mysqlmaster
         
-        image: php:7.4-fpm
+        # image: php:7.4-fpm
         build: ./src/php
-
-    
         privileged: true
         restart: always
         working_dir: /var/www/html
@@ -50,11 +48,11 @@ services:
             - "9000:9000"
         networks: 
             - app-network
-        deploy: 
-            mode: replicated
-            replicas: 2
-            restart_policy:
-                condition: on-failure
+        # deploy: 
+        #     mode: replicated
+        #     replicas: 2
+        #     restart_policy:
+        #         condition: on-failure
     
     
 
@@ -79,5 +77,4 @@ services:
 
 networks: 
     app-network:
-        external: 
-            name: app-network
+        driver: bridge
